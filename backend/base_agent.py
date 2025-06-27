@@ -34,7 +34,7 @@ class BaseAgent:
             try:
                 print(f"🤖 LLM attempt {attempt + 1}/{max_retries}")
                 payload = {
-                    "model": "deepseek/deepseek-r1-0528:free",
+                    "model": "deepseek/deepseek-chat-v3-0324:free",
                     "messages": messages, "temperature": 0.7, "max_tokens": 4000
                 }
                 async with httpx.AsyncClient(timeout=120.0) as client:
